@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just something small</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="firstname">Firstname :</label>
+      <br />
+      <input id="firstName" type="Text" />
+      <br />
+      <input id="submit" type="submit" />
+    </form>
+
+    <p id="displayName"></p>
+
+    <script>
+      const firstName = document.querySelector("#firstName");
+      const submit = document.querySelector("#submit");
+      const displayName = document.querySelector("#displayName");
+
+      submit.addEventListener("click", greet);
+
+      function greet(e) {
+        e.preventDefault();
+
+        displayName.innerHTML = `hi ${firstName.value}`;
+      }
+    </script>
+  </body>
+</html>
